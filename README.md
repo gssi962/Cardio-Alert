@@ -1,9 +1,5 @@
-# 💓 Cardio Alert – AI-Powered Heart Attack Early Warning  
+# 💓 Cardio Alert – AI-Powered Heart Attack Early Warning
 
-**Team:** Code Crusaders 💻  
-**Event:** Cyfuture AI Hackathon 2025 🚀  
-
----
 
 ## 📌 Overview  
 **Cardio Alert** is an AI-inspired health monitoring simulation that predicts possible heart attack risk **up to 15 minutes before occurrence ⏳**, using **real-time vitals tracking**, **camera monitoring**, and **intelligent alerts**.  
