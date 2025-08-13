@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cardio Alert - Heart Attack Early Warning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>💓 Cardio Alert</h1>
+    <p class="tagline">AI-Powered Heart Attack Early Detection & Emergency Response System</p>
+    <button id="scrollToMonitoring" class="btn">Start Live Monitoring</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Cardio Alert</h2>
+    <p>
+      Cardio Alert is an innovative simulation system designed to predict and warn users about potential heart attacks up to 15 minutes in advance, 
+      by monitoring heartbeat, body temperature, and other vitals using AI-driven analytics.
+      This demo mimics a real-world setup combining camera scan simulation, sensor data visualization, alert messaging, and emergency protocols.
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-video"></i>
+        <h3>Live Camera Monitoring</h3>
+        <p>Real-time video feed with scanning overlay simulating AI analysis.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Vitals Tracking</h3>
+        <p>Continuous heartbeat and temperature data visualization with digital counters.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-bell"></i>
+        <h3>Intelligent Alerts</h3>
+        <p>Visual and audio alerts with siren and voice warnings upon detecting abnormal vitals.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clock"></i>
+        <h3>Countdown Timer</h3>
+        <p>Predictive timer showing time remaining before possible heart attack risk.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-sms"></i>
+        <h3>Notification Simulation</h3>
+        <p>Simulated SMS dispatches to family and emergency services during alert situations.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-notes-medical"></i>
+        <h3>Historical Log</h3>
+        <p>Time-stamped log showing vitals trends and alert history during the session.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monitoring Section -->
+  <section id="monitoring">
+    <h2>Live Monitoring Panel</h2>
+
+    <!-- User Details -->
+    <div class="user-form">
+      <h3>Patient Details</h3>
+      <label>Name: <input type="text" id="name" placeholder="Enter patient name" /></label>
+      <label>Age: <input type="number" id="age" placeholder="Age" min="1" max="120" /></label>
+      <label>Gender:
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <button id="startBtn">▶ Start Monitoring</button>
+    </div>
+
+    <!-- Camera Feed -->
+    <div class="camera-container">
+      <video id="camera" autoplay playsinline></video>
+      <div class="hud-panel">
+        <div>💓 Heart Rate: <span id="hbValue">--</span> BPM</div>
+        <div>🌡 Temperature: <span id="tempValue">--</span> °C</div>
+        <div>Status: <span id="statusValue">Normal</span></div>
+      </div>
+      <div id="face-overlay"></div>
+      <div class="scan-line"></div>
+    </div>
+
+    <!-- Vitals Graphs -->
+    <div class="charts-section">
+      <canvas id="heartbeatChart"></canvas>
+      <canvas id="tempChart"></canvas>
+    </div>
+
+    <!-- Alerts -->
+    <div class="alerts-area">
+      <div id="alertMsg" class="normal">System idle...</div>
+      <div id="countdownTimer"></div>
+      <div id="smsStatus" class="sms-hidden">📨 Sending SMS to family & hospital...</div>
+    </div>
+
+    <!-- Test Alarm -->
+    <div class="test-section">
+      <button id="testAlarmBtn">🔊 Test Alarm Sound</button>
+    </div>
+
+  </section>
+
+  <!-- Emergency Protocol Section -->
+  <section id="emergency">
+    <h2>Emergency Protocol</h2>
+    <p>
+      When abnormal vitals are detected, Cardio Alert immediately triggers an alert, initiates a 15-minute countdown for predicted risk,
+      and simulates notification sent to family and emergency services, helping users take proactive emergency actions.
+    </p>
+  </section>
+
+  <!-- Log Section -->
+  <section id="log-section">
+    <h2>Vitals & Alert Log</h2>
+    <div id="logPanel"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ for Hackathon 2025. Developed by [Your Name]</p>
+  </footer>
+
+  <!-- Alarm Sound -->
+  <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+

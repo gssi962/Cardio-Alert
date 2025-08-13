@@ -1,0 +1,302 @@
+/* Reset & Fonts */
+body {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  background: #0a0f1a;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.3em;
+}
+p {
+  line-height: 1.5;
+  max-width: 900px;
+  margin: 0 auto 1.2em auto;
+  font-size: 1.1em;
+}
+
+/* Buttons */
+button {
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 8px #e63946cc;
+}
+button:hover {
+  background: #c62836;
+  box-shadow: 0 0 12px #c62836cc;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 20px;
+  max-width: 960px;
+  margin: auto;
+  border-bottom: 1px solid #222;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  background: linear-gradient(135deg, #ff0000b8, #d628286e);
+  color: white;
+  padding: 100px 20px;
+}
+#hero h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #ff0000;
+}
+#hero .tagline {
+  font-size: 1.5rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+#scrollToMonitoring {
+  font-size: 1.3rem;
+}
+
+/* About Section */
+#about {
+  font-size: 1.15em;
+  color: #bbb;
+}
+
+/* Features Section */
+#features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  color: #ddd;
+}
+.features-grid {
+  display: contents; /* container for feature cards */
+}
+.feature-card {
+  background: #151f33bb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #e63946aa;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: scale(1.05);
+}
+.feature-card i {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #e63946;
+}
+
+/* Monitoring Panel */
+#monitoring {
+  background: #121927cc;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+.user-form {
+  margin-bottom: 30px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user-form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  font-weight: 600;
+}
+.user-form input, .user-form select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  width: 55%;
+}
+.user-form button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Camera Feed */
+.camera-container {
+  position: relative;
+  margin: 0 auto 30px auto;
+  width: 640px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #e63946cc;
+  background: black;
+}
+#camera {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* HUD Digital Display */
+.hud-panel {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  color: limegreen;
+  font-weight: 600;
+}
+
+/* Face Overlay Color */
+#face-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  pointer-events: none;
+  opacity: 0.38;
+  transition: background-color 0.8s ease;
+}
+
+/* Scanning Red Line */
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e63946, transparent);
+  animation: scanMove 4s linear infinite;
+}
+@keyframes scanMove {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* Charts Section */
+.charts-section {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.charts-section canvas {
+  width: 320px !important;
+  height: 220px !important;
+  background: #1e2734;
+  border-radius: 14px;
+  box-shadow: 0 0 10px #e6394688;
+}
+
+/* Alert Area */
+.alerts-area {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-weight: 700;
+}
+#alertMsg {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  transition: color 0.5s ease;
+}
+#alertMsg.risk {
+  color: #f44336;
+  text-shadow: 0 0 8px #f44336;
+}
+#alertMsg.warning {
+  color: #ffb300;
+  text-shadow: 0 0 8px #ffb300;
+}
+#alertMsg.normal {
+  color: #4caf50;
+  text-shadow: 0 0 8px #4caf50;
+}
+
+#countdownTimer {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff3b3b;
+  animation: blink 1s infinite alternate;
+  margin-bottom: 10px;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* SMS Sending Simulation */
+#smsStatus {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #55aaff;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.sms-show {
+  opacity: 1;
+}
+.sms-hidden {
+  opacity: 0;
+}
+
+/* Test Alarm Button */
+.test-section {
+  max-width: 200px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+/* Log Section */
+#log-section {
+  max-width: 960px;
+  margin: 20px auto 60px auto;
+  background: #111a27d4;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #e6394666;
+  padding: 20px;
+  color: #bbb;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  height: 180px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.3;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+  margin-top: 80px;
+  body.blink-red {
+  animation: blinkBodyRed 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes blinkBodyRed {
+  0% { background-color: #0a0f1a; }
+  100% { background-color: #5e0000; }
+}
+
+}
+
+
+
+
+
+
