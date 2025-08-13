@@ -1,44 +1,57 @@
-# Cardio Alert ❤️‍🩹
-**AI-Powered Early Heart Attack Detection and Emergency Alert System**
+💓 Cardio Alert – AI‑Powered Heart Attack Early Warning
 
----
+Team: Code Crusaders 💻
+Event: Cyfuture AI Hackathon 2025 🚀
+📌 Overview
 
-## 📌 Project Overview
-Heart attacks are becoming increasingly common, and early detection can save lives.  
-**Cardio Alert** is a simulation-based project that predicts the possibility of a heart attack **up to 15 minutes before it occurs** using:
-- Camera-based facial color and expression analysis  
-- Simulated thermal and heartbeat sensors  
-- Breathing pattern detection  
+Cardio Alert is an AI‑inspired health monitoring simulation that predicts possible heart attack risk up to 15 minutes before occurrence ⏳, using real‑time vitals tracking, camera monitoring, and intelligent alerts.
 
-If a potential heart attack is detected, the system automatically:
-- Plays a loud **alarm sound**
-- Sends **emergency alerts** to family, neighbors (simulated)
-- Displays an **on-screen warning**
+Built as a browser‑based simulation for hackathon demonstration – no hardware required – it mimics real-world medical monitoring systems through a polished UI and realistic data visualization.
+✨ Features
 
----
+    🎥 Live Camera Feed with animated scanning overlay
 
-## ✨ Features
-- 📷 **Simulated Camera Scan** for detecting changes in facial color, sweating, or expressions.
-- ❤️ **Pulse & Thermal Monitoring** (sensor data simulated in real time).
-- ⏳ **15-Minute Early Warning Simulation** before predicted heart attack.
-- 🔊 **Alarm & Voice Alert** when danger is detected.
-- 📩 **Family & Neighborhood Alert** (simulated notifications).
-- 📝 **Patient Info Form** – Add patient’s Name, Age, and Health details.
+    📊 Real‑time Vitals Charts (Heartbeat & Temperature) via Chart.js
 
----
+    🟢🟡🔴 Face Color Risk Indicator (Normal / Warning / Risk)
 
-## 🛠 Tech Stack
-**Frontend:**
-- HTML5, CSS3, JavaScript (Vanilla)
-- Chart.js for live sensor data visualization
-- Text-to-Speech API for voice alerts
+    ⏳ 15-Minute Countdown Prediction for high-risk conditions
 
-**Backend (Optional for real AI integration):**
-- Python Flask (for AI prediction models)
-- scikit-learn / TensorFlow (simulation-ready)
+    🔊 Siren + Voice Alerts powered by Web Speech API
 
-**Hosting:**
-- GitHub Pages (for online demo)
+    📩 SMS Notification Simulation to family/hospital
 
----
+    📝 Vitals & Alert Log Panel with timestamps
+
+    💻 100% client‑side – works instantly online
+
+🛠 Tech Stack
+
+Online Demo (Hackathon) 💻
+
+    HTML, CSS, JavaScript
+
+    Chart.js 📊
+
+    WebRTC API 🎥 (camera access)
+
+    Web Speech API 🗣 (voice alerts)
+
+    GitHub Pages / Netlify (deployment)
+
+    No backend (fully client‑side)
+
+Offline / Future Prototype ⚙
+
+    MAX30100 Pulse Sensor, IR Thermal Sensor
+
+    Python (TensorFlow / Keras for AI model)
+
+    OpenCV (face detection, color analysis)
+
+    Flask / FastAPI backend
+
+    Cloud hosting (AWS / GCP)
+
+    Messaging APIs (Twilio / Firebase)
 
